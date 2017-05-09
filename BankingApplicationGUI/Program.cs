@@ -8,6 +8,10 @@ namespace BankingApplicationGUI
 {
     static class Program
     {
+        // Make form accessble
+        public static Form1 FirstForm;
+        public static Form2 SecondForm;
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -16,7 +20,13 @@ namespace BankingApplicationGUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            // Instantiate both forms
+            SecondForm = new Form2();
+            FirstForm = new Form1();
+
+
+            Application.Run(FirstForm);
         }
     }
 }
